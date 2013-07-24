@@ -2,3 +2,6 @@
 *.db
 .*.swp
 
+*.sublime-*
+brainfreeze/build/
+
