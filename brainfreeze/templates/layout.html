@@ -1,19 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>My site</title>
+	<head>
+			<meta charset="utf-8">
+			<title>FarisChebib.is</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- <link href="/static/css/style.css" rel="stylesheet" type="text/css"
-		/>-->
-		<link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<section class='container'>
-    <h1><a href="{{ url_for("index") }}">My site</a></h1>
-{% block content %}
-    <p>Default content to be displayed</p>
-{% endblock content %}
-	</section>
-</body>
+			<!-- bootstrap -->
+			<link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<section class='container'>
+			<h1><a href="{{ url_for("index") }}">My site</a></h1>
+	{% block content %}
+			<p>Default content to be displayed</p>
+	{% endblock content %}
+		<nav class="nav nav-pills">
+			<li><a class="active" href="/"><i class="icon-home icon-white"></i> Home</a></li>
+			<li><a href="/archive/"><i class="icon-book icon-white"></i> Archive</a></li>
+		</nav>
+		</section>
+		<!-- JS -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		{% block extrajs %}
+		{% endblock %}
+	</body>
 </html>
