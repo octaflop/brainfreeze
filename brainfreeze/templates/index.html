@@ -2,13 +2,14 @@
 
 {% block content %}
     <h2>List of stuff</h2>
-    <ul>
+		<section class="article-list">
     {% for page in pages %}
-        <li>
-            <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
-        </li>
+			<article>
+			<h3 class="small"><a href="{{ url_for("page", path=page.path) }}">{{
+					page.title }}</a></h3>
+			<article>
     {% else %}
         <li>No stuff.</li>
     {% endfor %}
-    </ul>
+		</section>
 {% endblock content %}
