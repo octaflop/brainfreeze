@@ -18,7 +18,7 @@ freezer = Freezer(app)
 @app.route("/")
 def index():
     # return "Hola %s" % request.accept_mimetypes
-    return render_template("index.html", page=page)
+    return render_template("index.html", pages=pages)
 
 @app.route('/<path:path>')
 def page(path):
