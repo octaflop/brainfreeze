@@ -1,0 +1,1 @@
+../../../assets/bower_components/bootstrap/js/carousel.js
