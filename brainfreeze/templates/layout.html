@@ -10,14 +10,32 @@
 			<link href="{{ url_for('static', filename='css/bootstrap-glyphicons.css') }}" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
+		<div class="modal fade" id="archiveModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<a href="#" data-dismiss="modal" class="btn btn-info">Close</a>
+						<a href="#" class="btn btn-primary">Save changes</a>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
 		<section class='container'>
-			<h1><a href="{{ url_for("index") }}">My site</a></h1>
+			<h1><a href="{{ url_for("index") }}">FarisChebib.is</a></h1>
 	{% block content %}
 			<p>Default content to be displayed</p>
 	{% endblock content %}
 		<nav class="nav nav-pills">
 			<li><a class="active" href="/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-			<li><a href="/archive/"><i class="icon-book icon-white"></i> Archive</a></li>
+			<li><a data-toggle="modal" data-target="#archiveModal"><i class="icon-book icon-white"></i> Archive</a></li>
 		</nav>
 		<footer>
 			{% include "includes/_footer.html" %}
