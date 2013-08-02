@@ -35,7 +35,8 @@
 	{% endblock content %}
 		<nav class="nav nav-pills">
 			<li><a class="active" href="/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-			<li><a data-toggle="modal" data-target="#archiveModal"><i class="icon-book icon-white"></i> Archive</a></li>
+			<li><a data-toggle="modal" data-target="#archiveModal"><i
+					class="glyphicon glyphicon-book"></i> Archive</a></li>
 		</nav>
 		<footer>
 			{% include "includes/_footer.html" %}
@@ -50,10 +51,10 @@
 		<script src="{{ url_for('static', filename='js/collapse.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/dropdown.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/popover.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/scrollspy.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/tab.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/tooltip.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/popover.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/transition.js') }}"></script>
 		{% block extrajs %}
 		{% endblock %}
