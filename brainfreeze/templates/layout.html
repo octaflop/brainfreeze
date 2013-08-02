@@ -7,6 +7,7 @@
 
 			<!-- bootstrap -->
 			<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+			<link href="{{ url_for('static', filename='css/bootstrap-glyphicons.css') }}" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<section class='container'>
@@ -15,7 +16,7 @@
 			<p>Default content to be displayed</p>
 	{% endblock content %}
 		<nav class="nav nav-pills">
-			<li><a class="active" href="/"><i class="icon-home icon-white"></i> Home</a></li>
+			<li><a class="active" href="/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
 			<li><a href="/archive/"><i class="icon-book icon-white"></i> Archive</a></li>
 		</nav>
 		<footer>
