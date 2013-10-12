@@ -1,4 +1,5 @@
 import sys
+import datetime
 # Static flask imports
 from flask import Flask, render_template
 # Dynamic flask imports
@@ -18,12 +19,14 @@ freezer = Freezer(app)
 @app.route("/")
 def index():
     # return "Hola %s" % request.accept_mimetypes
-    return render_template("index.html", pages=pages)
+    updated = datetime.datetime.now()
+    return render_template("index.html", pages=pages, updated=updated)
 
 @app.route('/<path:path>')
 def page(path):
+    updated = datetime.datetime.now()
     page = pages.get_or_404(path)
-    return render_template("page.html", page=page)
+    return render_template("page.html", page=page, updated=updated)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "build":
