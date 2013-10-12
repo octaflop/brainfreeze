@@ -12,4 +12,3 @@ $ bower install bootstrap
 ```
 
 The symlinks should take care of the rest.
-
